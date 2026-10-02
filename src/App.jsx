@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { useCallback, useState } from 'react'
 import Layout from './components/Layout.jsx'
 import DashboardPage from './components/dashboard/DashboardPage.jsx'
@@ -6,7 +6,7 @@ import CapaPage from './pages/CapaPage.jsx'
 import LeveyJenningsPage from './pages/LeveyJenningsPage.jsx'
 import InputQcPage from './pages/InputQcPage.jsx'
 import MasterDataPage from './pages/MasterDataPage.jsx'
-import PlaceholderPage from './pages/PlaceholderPage.jsx'
+import LaporanPage from './pages/LaporanPage.jsx'
 import InputQcModal from './components/InputQcModal.jsx'
 import CapaModal from './components/CapaModal.jsx'
 import Icon from './components/Icon.jsx'
@@ -41,10 +41,9 @@ export default function App() {
             element={<LeveyJenningsPage onOpenCapa={(t) => setCapaTarget(t)} onNotify={notify} />}
           />
           <Route path="/input-qc-harian" element={<InputQcPage onNotify={notify} />} />
-          <Route path="/grafik-levey-jennings" element={<PlaceholderPage path="/grafik-levey-jennings" />} />
           <Route path="/master-data" element={<MasterDataPage onNotify={notify} />} />
-          <Route path="/laporan" element={<PlaceholderPage path="/laporan" />} />
-          <Route path="*" element={<PlaceholderPage path="/laporan" />} />
+          <Route path="/laporan" element={<LaporanPage onNotify={notify} />} />
+          <Route path="*" element={<Navigate to="/laporan" replace />} />
         </Route>
       </Routes>
 

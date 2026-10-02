@@ -10,7 +10,7 @@ const TITLES = {
   '/input-qc-harian': 'Input QC Harian',
   '/grafik-levey-jennings': 'Grafik Levey-Jennings',
   '/master-data': 'Master Data Kendali Mutu (QC) Laboratorium',
-  '/laporan': 'Laporan',
+  '/laporan': 'Laporan Kendali Mutu & Bukti Akreditasi',
 }
 
 export default function Layout() {
