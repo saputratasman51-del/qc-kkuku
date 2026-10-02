@@ -1,0 +1,1140 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-tint": "#006a63",
+        "on-surface-variant": "#3e4947",
+        "on-tertiary-container": "#c4f3f2",
+        "on-secondary": "#ffffff",
+        "background": "#faf8ff",
+        "on-secondary-fixed": "#001f29",
+        "on-primary-fixed-variant": "#00504a",
+        "on-primary": "#ffffff",
+        "surface-container": "#eaedff",
+        "on-surface": "#131b2e",
+        "tertiary-fixed-dim": "#a1cfce",
+        "surface-variant": "#dae2fd",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed-variant": "#204e4d",
+        "tertiary": "#2c5858",
+        "surface-dim": "#d2d9f4",
+        "primary-fixed": "#9cf2e8",
+        "primary-fixed-dim": "#80d5cb",
+        "tertiary-fixed": "#bdebea",
+        "surface": "#faf8ff",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-error": "#ffffff",
+        "primary": "#005c55",
+        "on-primary-fixed": "#00201d",
+        "secondary-fixed": "#b9eaff",
+        "secondary-fixed-dim": "#81d1f0",
+        "surface-container-highest": "#dae2fd",
+        "inverse-on-surface": "#eef0ff",
+        "on-secondary-fixed-variant": "#004d62",
+        "on-secondary-container": "#00647d",
+        "outline-variant": "#bdc9c6",
+        "inverse-surface": "#283044",
+        "secondary": "#006781",
+        "primary-container": "#0f766e",
+        "tertiary-container": "#457171",
+        "on-background": "#131b2e",
+        "secondary-container": "#8fdfff",
+        "on-error-container": "#93000a",
+        "on-tertiary-fixed": "#002020",
+        "outline": "#6e7977",
+        "surface-bright": "#faf8ff",
+        "inverse-primary": "#80d5cb",
+        "surface-container-low": "#f2f3ff",
+        "on-primary-container": "#a3faef",
+        "surface-container-high": "#e2e7ff",
+        "on-tertiary": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "space-lg": "1.25rem",
+        "space-md": "0.75rem",
+        "space-xl": "2rem",
+        "gutter-desktop": "1.5rem",
+        "margin-desktop": "2rem",
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "space-sm": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Plus Jakarta Sans"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "data-mono": ["Inter"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "display-lg-mobile": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "display-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="px-space-md py-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center p-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.04)] flex-shrink-0"><span class="material-symbols-outlined text-primary text-headline-lg">biotech</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold truncate">SIM-QC LAB</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase">v2.4</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">RSUD SMJ I Kayong Utara</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Menu Analisis QC</span></div><nav class="flex-1 px-space-sm space-y-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_6px_rgba(0,92,85,0.15)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-headline-sm">grid_view</span><span class="truncate">Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_6px_rgba(0,92,85,0.15)]" data-path="input-qc-harian" href="#"><span class="material-symbols-outlined text-headline-sm">edit_document</span><span class="truncate">Input QC Harian</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="grafik-levey-jennings" href="#"><span class="material-symbols-outlined text-headline-sm">show_chart</span><span class="truncate">Grafik Levey-Jennings</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="capa-pelanggaran-westgard" href="#"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-headline-sm">warning</span><span class="truncate">CAPA &amp; Westgard</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">3</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="master-data" href="#"><span class="material-symbols-outlined text-headline-sm">database</span><span class="truncate">Master Data</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="laporan" href="#"><span class="material-symbols-outlined text-headline-sm">analytics</span><span class="truncate">Laporan</span></a></nav></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)] space-y-space-xs"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>Shift Pagi - Aktif</span><span class="font-label-sm text-label-sm text-on-surface-variant">Inst. Lab</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">dr. Hendra Pratama, Sp.PK</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Petugas: Siti Rahma, A.Md.AK</span></div></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-body-lg text-primary">local_hospital</span><span class="font-semibold text-on-surface">Instalasi Laboratorium Patologi Klinik</span><span class="material-symbols-outlined text-body-sm">chevron_right</span><span class="text-primary font-medium truncate">Monitoring Kendali Mutu Internal (PMI)</span></div><div class="hidden xl:flex items-center px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>DATA DEMO AKTIF</div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-body-sm text-primary">calendar_today</span><span class="">Senin, 24 Oktober 2024</span><span class="text-on-surface-variant">•</span><span class="font-data-mono text-data-mono font-medium">08:42:15 WIB</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.05)] font-label-sm text-label-sm font-semibold" type="button">Petugas Lab</button><button class="px-space-sm py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">PJ / Sp.PK</button></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Cetak Lembar QC" type="button"><span class="material-symbols-outlined text-headline-sm">print</span></button><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Ekspor Data (Excel/PDF)" type="button"><span class="material-symbols-outlined text-headline-sm">file_download</span></button><div class="relative"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Notifikasi Pelanggaran Westgard" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></div></div><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VF9xYxi4lY7QVwBsrmJEKA9OtraZyEBhbhoi_TahvahNsa_6VbHwPSqw8yKGJnrx4er4Pxi_6sZTGnvBNkLFBFWpgCBORk61kKY6PsGQX1XDDIu5RFnaTeHWjT9mjc8OPmy4PnZR51qyr36Q98coV-GccupGN2WmAhxQiVrTraS7-rQ8dJPK00CxBi-heSoAbQSdW-VPnxUOIH72MnSrnzjdRTvEmxkmk3z05tsoE8hl1PxUrPXL7-T_mWEX4jF7mpXuzvMvKq6zA"></div></div></header><main class="relative pt-16 bg-surface min-h-[calc(100vh-4rem)] w-full px-gutter-desktop py-space-lg"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Banner & Quick Context -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md relative z-10">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Modul Analitik Terakreditasi ISO 15189
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Shift Pagi (07:00 - 14:00 WIB)</span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Form Input &amp; Riwayat QC Harian</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Pencatatan kontrol mutu harian sebelum operasional pengujian spesimen pasien. Validasi real-time Z-score dan kepatuhan multi-rule Westgard.
+          </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-2 px-space-sm py-1.5 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-primary text-headline-sm">rule_settings</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Status Evaluasi</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Otomasi Westgard Aktif</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-space-sm py-1.5 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-headline-sm">sync</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Sinkronisasi</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Lot Master Terhubung</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Form and Master Target Card Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Entry Form (7 Columns on XL) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">science</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Input Data QC Baru</h2>
+</div>
+<span class="font-data-mono text-data-mono text-on-surface-variant">ID Sesi: QC-20241024-009</span>
+</div>
+<form class="space-y-space-md" id="qcEntryForm" onsubmit="event.preventDefault(); handleQcSubmit();">
+<!-- Row 1: Tanggal & Petugas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="qcTimestamp">
+              Tanggal &amp; Waktu Pengujian
+            </label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 focus-within:bg-surface-container-lowest">
+<span class="material-symbols-outlined text-on-surface-variant text-body-lg mr-2">event_available</span>
+<input class="w-full bg-transparent font-data-mono text-data-mono text-on-surface focus:outline-none cursor-not-allowed" id="qcTimestamp" readonly="" type="text" value="2024-10-24 08:42 WIB">
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="qcTechnician">
+              Petugas Pemeriksa (ATLM)
+            </label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-lg mr-2">badge</span>
+<select class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none" id="qcTechnician">
+<option selected="" value="Siti Rahma, A.Md.AK">Siti Rahma, A.Md.AK (NIP 199408122019032008)</option>
+<option value="dr. Hendra Pratama, Sp.PK">dr. Hendra Pratama, Sp.PK (Penanggung Jawab)</option>
+<option value="Budi Setiawan, S.Tr.Kes">Budi Setiawan, S.Tr.Kes (Shift Cadangan)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Row 2: Alat & Parameter Dinamis -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="instrumentSelect">
+              Instrumen / Analyzer Laboratorium
+            </label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-lg mr-2">precision_manufacturing</span>
+<select class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none" id="instrumentSelect" onchange="updateParameterOptions()">
+<option selected="" value="DIRUI_CS240">Dirui CS-T240 (Kimia Darah)</option>
+<option value="SYSMEX_XN550">Sysmex XN-550 (Hematologi Automatik)</option>
+<option value="COBAS_E411">Roche Cobas e411 (Imunologi Serologi)</option>
+<option value="MISSION_U500">Mission U500 (Urin Analyzer Otomatis)</option>
+</select>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="parameterSelect">
+              Parameter Uji Spesifik
+            </label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-lg mr-2">water_drop</span>
+<select class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none" id="parameterSelect" onchange="updateMasterTarget()"><option selected="" value="URIC_ACID">Asam Urat Serum (UA-05) - Uricase-Peroxidase</option><option value="GLUCOSE">Glukosa Darah (GOD-PAP)</option><option value="CHOLESTEROL">Kolesterol Total (CHOD-PAP)</option><option value="SGPT_ALT">SGPT / ALT (IFCC Tanpa P-5'-P)</option><option value="CREATININE">Kreatinin Darah (Jaffe Kinetik)</option></select>
+</div>
+</div>
+</div>
+<!-- Row 3: Level Kontrol & Lot Kontrol Aktif -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium">
+              Level Kontrol Serum/Bahan Kontrol
+            </label>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-1 rounded-lg text-center" id="controlLevelSelector"><button class="py-1.5 rounded-DEFAULT text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all" id="btnLevel1" onclick="selectLevel(1)" type="button">Lvl 1 (Normal)</button><button class="py-1.5 rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm font-bold transition-all" id="btnLevel2" onclick="selectLevel(2)" type="button">Lvl 2 (Patologis Tinggi)</button><button class="py-1.5 rounded-DEFAULT text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all" id="btnLevel3" onclick="selectLevel(3)" type="button">Lvl 3 (Tinggi)</button></div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="lotNumberDisplay">
+              Nomor Lot Master Kontrol
+            </label>
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-body-lg">verified</span>
+<span class="font-data-mono text-data-mono text-on-surface font-semibold truncate" id="lotNumberDisplay">#LOT-2024-TL991 (TruLab P - DiaSys, Exp: 18 Des 2025)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold flex-shrink-0">Tervalidasi</span>
+</div>
+</div>
+</div>
+<!-- Row 4: Input Nilai Hasil QC & Keterangan Tambahan -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs">
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface font-bold" for="qcResultInput">
+                Hasil Pembacaan Alat (Observed Run)
+              </label>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ketik nilai numerik hasil running instrumen</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-body-md text-primary">straighten</span>
+<span class="">Satuan Acuan: <strong class="text-on-surface" id="unitLabel">mg/dL</strong></span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<div class="md:col-span-6 relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-display-lg text-display-lg px-space-md py-space-sm rounded-lg focus:outline-none shadow-inner tracking-tight" id="qcResultInput" oninput="calculateZScore()" placeholder="0.0" step="0.1" type="number" value="8.58">
+<div class="absolute right-4 top-1/2 -translate-y-1/2 font-data-mono text-data-mono text-on-surface-variant font-bold" id="unitSuffix">
+                mg/dL
+              </div>
+</div>
+<div class="md:col-span-6">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Kalkulasi Otomatis Z-Score</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg font-bold text-primary" id="calculatedZScoreValue">+0.23 SD</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Deviasi Standar)</span>
+</div>
+</div>
+<div class="flex flex-col items-end" id="westgardQuickStatus"><span class="px-space-xs py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>In-Control / Normal</span><span class="font-label-sm text-label-sm text-primary mt-0.5 font-medium">Presisi Analitik Diterima</span></div>
+</div>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="qcNotes">
+              Keterangan Kondisi Reagen &amp; Kalibrasi (Opsional)
+            </label>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-space-sm rounded-lg focus:outline-none" id="qcNotes" placeholder="Tambahkan rincian bila ada pergantian batch reagen, cuvette wash, atau lampu fotometer..." type="text" value="Run #25 harian. TruLab P kontrol rekonstitusi baru suhu 20°C, blanko reagen dan kalibrasi tervalidasi.">
+</div>
+</div>
+<!-- Form Action Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-DEFAULT bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md font-semibold flex items-center gap-1.5" onclick="resetFormCustom()" type="reset">
+<span class="material-symbols-outlined text-body-lg">restart_alt</span>
+              Reset Form
+            </button>
+<button class="px-space-md py-2 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 transition-opacity font-label-md text-label-md font-semibold flex items-center gap-1.5" onclick="toggleSimulateNormal()" type="button">
+<span class="material-symbols-outlined text-body-lg">science</span>
+              Simulasi Nilai Normal
+            </button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-lg py-2.5 rounded-DEFAULT bg-primary-container text-on-primary-container hover:opacity-95 shadow-md font-label-lg text-label-lg font-bold flex items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-headline-sm">save_as</span>
+              Simpan Hasil QC Harian
+            </button>
+</div>
+</div>
+</form>
+</div>
+<!-- Right: Read-only Reference Target & Active Instrument Insight (5 Columns on XL) -->
+<div class="xl:col-span-5 space-y-space-md">
+<!-- Master Control Parameters Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-headline-sm">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Target Master Kontrol</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+            Dirui CS-T240
+          </span>
+</div>
+<!-- Parameter Metrics Bento Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Target Mean (X̄)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="targetMeanDisplay">8.50</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="unitMeta1">mg/dL</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-1">Titik Tengah Ideal</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Target SD (1s)</span><div class="flex items-baseline gap-1 mt-1"><span class="font-headline-lg text-headline-lg font-bold text-on-surface" id="targetSdDisplay">0.35</span><span class="font-label-sm text-label-sm text-on-surface-variant" id="unitMeta2">mg/dL</span></div><span class="font-label-sm text-label-sm text-on-surface-variant mt-1">%CV Target: 4.12%</span></div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Rentang ±2 SD (Warning)</span>
+<div class="mt-1">
+<span class="font-data-mono text-data-mono font-bold text-on-surface" id="range2SdDisplay">7.80 – 9.20</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold mt-1">Batas Penerimaan Presisi</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Rentang ±3 SD (Action)</span>
+<div class="mt-1">
+<span class="font-data-mono text-data-mono font-bold text-error" id="range3SdDisplay">7.45 – 9.55</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold mt-1">Batas Penolakan Batch</span>
+</div>
+</div>
+<!-- Micro Levey-Jennings Visual Gauge -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-space-xs"><div class="flex items-center justify-between text-on-surface-variant"><span class="">Produsen Reagen:</span><span class="font-semibold text-on-surface">DiaSys Diagnostic Systems GmbH</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Metode Deteksi:</span><span class="font-semibold text-on-surface">Uricase - Peroxidase (TBHBA)</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Bahan Kontrol:</span><span class="font-semibold text-on-surface">TruLab P Lot #LOT-2024-TL991</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Verifikator Lab:</span><span class="font-semibold text-primary">dr. Hendra Pratama, Sp.PK</span></div></div>
+<!-- Reagent & Calibration Traceability Log -->
+<div class="space-y-space-xs font-label-sm text-label-sm"><div class="flex items-center justify-between text-on-surface-variant"><span class="">Produsen Reagen:</span><span class="font-semibold text-on-surface">DiaSys Diagnostic Systems GmbH</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Metode Deteksi:</span><span class="font-semibold text-on-surface">Uricase - Peroxidase (TBHBA)</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Bahan Kontrol:</span><span class="font-semibold text-on-surface">TruLab P Lot #LOT-2024-TL991</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="">Verifikator Lab:</span><span class="font-semibold text-primary">dr. Hendra Pratama, Sp.PK</span></div></div>
+</div>
+<!-- Quick Guidance for Westgard Protocol -->
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-secondary text-body-lg">verified_user</span>
+<span class="">Protokol Mutu Internal (PMI)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Jika nilai QC melanggar aturan penolakan (<strong class="text-on-surface">1-3s, 2-2s, R-4s, atau 4-1s</strong>), instrumen <em>Wajib Di-Lock</em>. Dilarang menerbitkan hasil pasien sampai formulir Tindakan Korektif (CAPA) diverifikasi oleh Dokter Sp.PK.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Alert / Modal Notification Area (Simulated On Violation) -->
+<div class="rounded-xl bg-primary-fixed/40 text-on-primary-fixed-variant p-space-md shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md" id="westgardAlertBox"><div class="flex items-start gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined text-headline-md">verified</span></div><div class="space-y-0.5"><div class="flex items-center gap-2"><span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold uppercase">QC IN-CONTROL</span><h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Status QC Valid &amp; Terkendali (In-Control)</h4></div><p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">Hasil pengujian Asam Urat Serum (UA-05) Level 2 bernilai <strong>8.58 mg/dL</strong> berada dalam batas toleransi analitik (Z-Score +0.23 SD). Semua 4 aturan Westgard aktif terpenuhi. Pengujian sampel pasien diizinkan berjalan.</p></div></div><div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-center"><button class="px-space-md py-2 rounded-DEFAULT bg-primary-container text-on-primary-container hover:opacity-90 font-label-md text-label-md font-bold shadow-sm flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-body-lg">task_alt</span>Validasi Batch Pasien</button><button class="px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1.5" onclick="goToChart()" type="button"><span class="material-symbols-outlined text-body-lg">show_chart</span>Lihat Kurva L-J</button></div></div>
+<!-- Historical QC Runs Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Riwayat Pemeriksaan QC Harian</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Log terenkripsi hasil pemeriksaan mutu laboratorium RSUD Sultan Muhammad Jamaludin I (Bulan Berjalan: Oktober 2024).
+        </p>
+</div>
+<!-- Quick Filter Bar -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Date Selector -->
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-md mr-1.5">calendar_month</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none" id="filterDate" onchange="filterQcTable()">
+<option value="ALL">Semua Tanggal (Okt 2024)</option>
+<option selected="" value="TODAY">Hari Ini (24 Okt 2024)</option>
+<option value="YESTERDAY">Kemarin (23 Okt 2024)</option>
+<option value="WEEK">7 Hari Terakhir</option>
+</select>
+</div>
+<!-- Instrument Filter -->
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-md mr-1.5">biotech</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none" id="filterInstrument" onchange="filterQcTable()">
+<option value="ALL">Semua Alat Lab</option>
+<option value="DIRUI_CS240">Dirui CS-T240</option>
+<option value="SYSMEX_XN550">Sysmex XN-550</option>
+<option value="COBAS_E411">Cobas e411</option>
+<option value="MISSION_U500">Mission U500</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-md mr-1.5">filter_alt</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none" id="filterStatus" onchange="filterQcTable()">
+<option value="ALL">Semua Status Mutu</option>
+<option value="NORMAL">Normal (In-Control)</option>
+<option value="WARNING">Peringatan (1-2s)</option>
+<option value="REJECT">Reject (Pelanggaran)</option>
+</select>
+</div>
+<!-- Search Input -->
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-body-md mr-1.5">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none w-36 lg:w-44" id="filterKeyword" oninput="filterQcTable()" placeholder="Cari lot, parameter, ATLM..." type="text">
+</div>
+</div>
+</div>
+<!-- QC Runs Tabular Grid -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse" id="qcDataTable">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-2.5 px-space-sm">Waktu &amp; Alat</th>
+<th class="py-2.5 px-space-sm">Parameter &amp; Satuan</th>
+<th class="py-2.5 px-space-sm">Level &amp; Lot</th>
+<th class="py-2.5 px-space-sm text-right">Hasil Running</th>
+<th class="py-2.5 px-space-sm text-right">Target (X̄ ± 1s)</th>
+<th class="py-2.5 px-space-sm text-right">Z-Score</th>
+<th class="py-2.5 px-space-sm text-center">Status Mutu</th>
+<th class="py-2.5 px-space-sm text-center">Westgard Rule</th>
+<th class="py-2.5 px-space-sm">Verifikasi Sp.PK</th>
+<th class="py-2.5 px-space-sm text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface" id="qcTableBody">
+<!-- Row 1: REJECT (Current Input Simulation) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-primary-fixed/20" data-instrument="DIRUI_CS240" data-status="NORMAL"><td class="py-2.5 px-space-sm"><div class="font-label-md text-label-md font-semibold text-on-surface">24/10/24 09:05</div><span class="font-label-sm text-label-sm text-on-surface-variant">Dirui CS-T240</span></td><td class="py-2.5 px-space-sm"><span class="font-label-md text-label-md font-bold text-on-surface">Asam Urat (UA-05)</span><span class="font-data-mono text-[11px] text-on-surface-variant block">mg/dL (TBHBA)</span></td><td class="py-2.5 px-space-sm"><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 2</span><span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#LOT-2024-TL991</span></td><td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">8.58</td><td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">8.50 ± 0.35</td><td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">+0.23 SD</td><td class="py-2.5 px-space-sm text-center"><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL</span></td><td class="py-2.5 px-space-sm text-center"><span class="font-label-sm text-label-sm text-primary font-medium">In-Control (4 Rules OK)</span></td><td class="py-2.5 px-space-sm"><span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm inline-flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">pending</span>Draft ATLM (Ready Sp.PK)</span></td><td class="py-2.5 px-space-sm text-right"><div class="flex items-center justify-end gap-1"><button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Edit Catatan" type="button"><span class="material-symbols-outlined text-body-lg">edit</span></button><button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button"><span class="material-symbols-outlined text-body-lg">visibility</span></button></div></td></tr>
+<!-- Row 2: NORMAL (Sysmex XN-550 WBC) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-instrument="SYSMEX_XN550" data-status="NORMAL">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">24/10/24 07:35</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sysmex XN-550</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">WBC (Leukosit)</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">10^3/uL</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 1</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#XN-4102</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">
+              7.12
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              7.05 ± 0.28
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">
+              +0.25 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-primary font-medium">In-Control</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>dr. Hendra, Sp.PK
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant opacity-40 cursor-not-allowed" title="Data Terkunci" type="button">
+<span class="material-symbols-outlined text-body-lg">lock</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: NORMAL (Sysmex XN-550 Trombosit) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-instrument="SYSMEX_XN550" data-status="NORMAL">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">24/10/24 07:38</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sysmex XN-550</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Trombosit (PLT)</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">10^3/uL</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 1</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#XN-4102</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">
+              238.0
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              240.0 ± 12.0
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">
+              -0.17 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-primary font-medium">In-Control</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>dr. Hendra, Sp.PK
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant opacity-40 cursor-not-allowed" title="Data Terkunci" type="button">
+<span class="material-symbols-outlined text-body-lg">lock</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: WARNING (Cobas e411 TSHs - 1-2s Rule) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-secondary-fixed/20" data-instrument="COBAS_E411" data-status="WARNING">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">24/10/24 07:15</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Roche Cobas e411</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">TSH Sensitif (ECLIA)</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">uIU/mL</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 2</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#ECL-5819</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-tertiary">
+              4.62
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              4.10 ± 0.24
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-tertiary">
+              +2.17 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>WARNING
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">1-2s (Periksa Trend)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">pending</span>Draft ATLM
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" title="Edit Catatan" type="button">
+<span class="material-symbols-outlined text-body-lg">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: NORMAL (Dirui Kolesterol) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-instrument="DIRUI_CS240" data-status="NORMAL">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">23/10/24 08:30</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dirui CS-T240</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Kolesterol Total</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">mg/dL (CHOD-PAP)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 1</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#CHOL-884</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">
+              154.2
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              152.0 ± 4.5
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">
+              +0.49 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-primary font-medium">In-Control</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>dr. Hendra, Sp.PK
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant opacity-40 cursor-not-allowed" title="Data Terkunci" type="button">
+<span class="material-symbols-outlined text-body-lg">lock</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: REJECT (Dirui SGPT 2-2s Rule) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-error-container/20" data-instrument="DIRUI_CS240" data-status="REJECT">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">23/10/24 08:35</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dirui CS-T240</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">SGPT / ALT</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">U/L (IFCC)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 2</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#ALT-3211</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-error">
+              98.5
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              86.0 ± 4.8
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-error">
+              +2.60 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>REJECT
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm font-bold text-error">2-2s (Sistematik)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>CAPA Disetujui
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-error" title="Lihat CAPA" type="button">
+<span class="material-symbols-outlined text-body-lg">assignment_turned_in</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: NORMAL (Mission U500 Berat Jenis Urin) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-instrument="MISSION_U500" data-status="NORMAL">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">23/10/24 07:45</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mission U500</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Urine Specific Gravity</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">SG (Refraktometri)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 1</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#URI-102</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">
+              1.015
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              1.015 ± 0.003
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">
+              0.00 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-primary font-medium">In-Control</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>dr. Hendra, Sp.PK
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant opacity-40 cursor-not-allowed" title="Data Terkunci" type="button">
+<span class="material-symbols-outlined text-body-lg">lock</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: NORMAL (Sysmex XN-550 Hemoglobin) -->
+<tr class="hover:bg-surface-container-low transition-colors" data-instrument="SYSMEX_XN550" data-status="NORMAL">
+<td class="py-2.5 px-space-sm">
+<div class="font-label-md text-label-md font-semibold text-on-surface">22/10/24 07:20</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sysmex XN-550</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Hemoglobin (Hb)</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">g/dL (SLS-Hb)</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Level 2</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block mt-0.5">#XN-4102</span>
+</td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-bold text-on-surface">
+              13.6
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-[12px] text-on-surface-variant">
+              13.5 ± 0.3
+            </td>
+<td class="py-2.5 px-space-sm text-right font-data-mono text-data-mono font-semibold text-primary">
+              +0.33 SD
+            </td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>NORMAL
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-primary font-medium">In-Control</span>
+</td>
+<td class="py-2.5 px-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lock</span>dr. Hendra, Sp.PK
+              </span>
+</td>
+<td class="py-2.5 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant opacity-40 cursor-not-allowed" title="Data Terkunci" type="button">
+<span class="material-symbols-outlined text-body-lg">lock</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary" title="Detail Data" type="button">
+<span class="material-symbols-outlined text-body-lg">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Audit Note -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs pt-space-xs">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-lg text-primary">shield</span>
+<span class=""><strong>Catatan Integritas Audit:</strong> Data QC yang telah divalidasi dokter spesialis patologi klinik terkunci secara permanen sesuai standar akreditasi ISO 15189:2022.</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Menampilkan 8 dari 142 entri kontrol bulan ini</span>
+</div>
+</div>
+</div>
+<!-- Simulated CAPA Dialog Overlay / Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="capaModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header with Cyan Tint Wash -->
+<div class="bg-primary-fixed/40 p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-headline-sm">medical_services</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Formulir Tindakan Korektif (CAPA)</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nomor Dokumen: CAPA/LAB-SMJ/2024/X/014</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant" onclick="closeCapaModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg space-y-space-md">
+<div class="p-space-sm rounded-lg bg-error-container text-on-error-container flex items-center gap-space-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-headline-sm text-error">report</span>
+<div class="">
+<strong>Pelanggaran Terdeteksi:</strong> Glukosa Darah (Dirui CS-T240) bernilai 242.0 mg/dL (+3.38 SD - Westgard 1-3s).
+          </div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="capaRootCause">
+            Akar Masalah (Root Cause Identification)
+          </label>
+<select class="w-full bg-surface-container-low rounded-lg px-space-sm py-2 font-body-md text-body-md text-on-surface focus:outline-none" id="capaRootCause">
+<option selected="" value="REAGENT_DETERIORATION">Deteriorasi Reagen Kerja (Lot kedaluwarsa / paparan suhu)</option>
+<option value="BUBBLE_PROBE">Gelembung Udara pada Sample/Reagent Probe</option>
+<option value="LAMP_ALIGNMENT">Lampu Fotometer / Filter Spektro Melemah</option>
+<option value="CALIBRATOR_DRIFT">Penyimpangan Kurva Kalibrator Baru</option>
+<option value="RECONSTITUTION_ERROR">Kesalahan Rekonstitusi Serum Kontrol Liofilisat</option>
+</select>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface font-semibold" for="capaActionTaken">
+            Tindakan Perbaikan Segera (Immediate Action Taken)
+          </label>
+<textarea class="w-full bg-surface-container-low rounded-lg p-space-sm font-body-md text-body-md text-on-surface focus:outline-none" id="capaActionTaken" placeholder="Jelaskan tindakan ATLM (contoh: Membuka botol reagen baru, cuvette wash 3 siklus, rekondisi elektroda, running ulang kontrol...)" rows="3">1. Melakukan pembersihan jarum probe reagen dan cuvette wash.
+2. Membuka vial reagen baru batch GLU-9903 botol 2.
+3. Menjalankan re-kalibrasi single-point dan running ulang kontrol level 3.</textarea>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-medium">Petugas Pelaksana</label>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Siti Rahma, A.Md.AK</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-sm text-label-sm text-on-surface-variant font-medium">Sp.PK Verifikator</label>
+<div class="font-label-md text-label-md text-primary font-semibold">dr. Hendra Pratama, Sp.PK</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-surface-container-low px-space-lg py-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status Alat: <strong class="text-error">LOCKED</strong></span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="closeCapaModal()" type="button">
+            Tutup
+          </button>
+<button class="px-space-md py-2 rounded-DEFAULT bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-md hover:opacity-95 transition-opacity" onclick="submitCapaDoc()" type="button">
+            Kirim &amp; Verifikasi Sp.PK
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Master Parameter Definitions Matrix
+  const qcMasterParameters = {
+    DIRUI_CS240: {
+      GLUCOSE: {
+        name: "Glukosa Darah",
+        unit: "mg/dL",
+        method: "GOD-PAP",
+        levels: {
+          1: { mean: 95.0, sd: 3.5, lot: "Lot #GLU-9901 (Exp: 15 Des 2025)" },
+          2: { mean: 145.0, sd: 5.2, lot: "Lot #GLU-9902 (Exp: 15 Des 2025)" },
+          3: { mean: 215.0, sd: 8.0, lot: "Lot #GLU-9903 (Exp: 15 Des 2025)" }
+        }
+      },
+      CHOLESTEROL: {
+        name: "Kolesterol Total",
+        unit: "mg/dL",
+        method: "CHOD-PAP",
+        levels: {
+          1: { mean: 152.0, sd: 4.5, lot: "Lot #CHOL-884 (Exp: 20 Jan 2026)" },
+          2: { mean: 210.0, sd: 7.0, lot: "Lot #CHOL-885 (Exp: 20 Jan 2026)" },
+          3: { mean: 285.0, sd: 9.5, lot: "Lot #CHOL-886 (Exp: 20 Jan 2026)" }
+        }
+      },
+      URIC_ACID: {
+        name: "Asam Urat",
+        unit: "mg/dL",
+        method: "Uricase",
+        levels: {
+          1: { mean: 4.8, sd: 0.22, lot: "Lot #UA-104 (Exp: 10 Nov 2025)" },
+          2: { mean: 7.5, sd: 0.35, lot: "Lot #UA-105 (Exp: 10 Nov 2025)" },
+          3: { mean: 11.2, sd: 0.50, lot: "Lot #UA-106 (Exp: 10 Nov 2025)" }
+        }
+      },
+      SGPT_ALT: {
+        name: "SGPT / ALT",
+        unit: "U/L",
+        method: "IFCC",
+        levels: {
+          1: { mean: 32.0, sd: 2.1, lot: "Lot #ALT-3210 (Exp: 05 Feb 2026)" },
+          2: { mean: 86.0, sd: 4.8, lot: "Lot #ALT-3211 (Exp: 05 Feb 2026)" },
+          3: { mean: 175.0, sd: 8.4, lot: "Lot #ALT-3212 (Exp: 05 Feb 2026)" }
+        }
+      },
+      CREATININE: {
+        name: "Kreatinin Darah",
+        unit: "mg/dL",
+        method: "Jaffe Kinetik",
+        levels: {
+          1: { mean: 1.10, sd: 0.08, lot: "Lot #CRE-551 (Exp: 12 Mar 2026)" },
+          2: { mean: 3.20, sd: 0.18, lot: "Lot #CRE-552 (Exp: 12 Mar 2026)" },
+          3: { mean: 6.80, sd: 0.34, lot: "Lot #CRE-553 (Exp: 12 Mar 2026)" }
+        }
+      }
+    },
+    SYSMEX_XN550: {
+      WBC: {
+        name: "WBC (Leukosit)",
+        unit: "10^3/uL",
+        method: "Flow Cytometry",
+        levels: {
+          1: { mean: 7.05, sd: 0.28, lot: "Lot #XN-4101 (Exp: 30 Nov 2024)" },
+          2: { mean: 12.50, sd: 0.55, lot: "Lot #XN-4102 (Exp: 30 Nov 2024)" },
+          3: { mean: 22.80, sd: 0.95, lot: "Lot #XN-4103 (Exp: 30 Nov 2024)" }
+        }
+      },
+      HGB: {
+        name: "Hemoglobin (Hb)",
+        unit: "g/dL",
+        method: "SLS Method",
+        levels: {
+          1: { mean: 9.2, sd: 0.25, lot: "Lot #XN-4101 (Exp: 30 Nov 2024)" },
+          2: { mean: 13.5, sd: 0.30, lot: "Lot #XN-4102 (Exp: 30 Nov 2024)" },
+          3: { mean: 17.8, sd: 0.45, lot: "Lot #XN-4103 (Exp: 30 Nov 2024)" }
+        }
+      }
+    },
+    COBAS_E411: {
+      TSH: {
+        name: "TSH Sensitif",
+        unit: "uIU/mL",
+        method: "ECLIA",
+        levels: {
+          1: { mean: 1.45, sd: 0.10, lot: "Lot #ECL-5818 (Exp: 18 Mei 2025)" },
+          2: { mean: 4.10, sd: 0.24, lot: "Lot #ECL-5819 (Exp: 18 Mei 2025)" },
+          3: { mean: 18.50, sd: 0.90, lot: "Lot #ECL-5820 (Exp: 18 Mei 2025)" }
+        }
+      }
+    },
+    MISSION_U500: {
+      SG: {
+        name: "Urine Specific Gravity",
+        unit: "SG",
+        method: "Refraktometri",
+        levels: {
+          1: { mean: 1.015, sd: 0.003, lot: "Lot #URI-102 (Exp: 01 Des 2025)" },
+          2: { mean: 1.025, sd: 0.004, lot: "Lot #URI-103 (Exp: 01 Des 2025)" },
+          3: { mean: 1.035, sd: 0.005, lot: "Lot #URI-104 (Exp: 01 Des 2025)" }
+        }
+      }
+    }
+  };
+
+  let currentLevel = 3;
+  let activeMean = 215.0;
+  let activeSd = 8.0;
+
+  function selectLevel(lvl) {
+    currentLevel = lvl;
+    for (let i = 1; i <= 3; i++) {
+      const btn = document.getElementById('btnLevel' + i);
+      if (i === lvl) {
+        btn.className = "py-1.5 rounded-DEFAULT bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm font-bold transition-all";
+      } else {
+        btn.className = "py-1.5 rounded-DEFAULT text-on-surface-variant font-label-sm text-label-sm font-semibold transition-all";
+      }
+    }
+    updateMasterTarget();
+  }
+
+  function updateParameterOptions() {
+    const inst = document.getElementById('instrumentSelect').value;
+    const paramSelect = document.getElementById('parameterSelect');
+    paramSelect.innerHTML = "";
+
+    const instParams = qcMasterParameters[inst] || qcMasterParameters.DIRUI_CS240;
+    for (const key in instParams) {
+      const opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = `${instParams[key].name} (${instParams[key].unit})`;
+      paramSelect.appendChild(opt);
+    }
+    updateMasterTarget();
+  }
+
+  function updateMasterTarget() {
+    const inst = document.getElementById('instrumentSelect').value;
+    const paramKey = document.getElementById('parameterSelect').value;
+    const instData = qcMasterParameters[inst] || qcMasterParameters.DIRUI_CS240;
+    const paramData = instData[paramKey] || instData[Object.keys(instData)[0]];
+
+    if (!paramData) return;
+
+    const lvlData = paramData.levels[currentLevel] || paramData.levels[1];
+    activeMean = lvlData.mean;
+    activeSd = lvlData.sd;
+
+    document.getElementById('targetMeanDisplay').textContent = activeMean.toFixed(1);
+    document.getElementById('targetSdDisplay').textContent = activeSd.toFixed(1);
+
+    const min2 = (activeMean - 2 * activeSd).toFixed(1);
+    const max2 = (activeMean + 2 * activeSd).toFixed(1);
+    const min3 = (activeMean - 3 * activeSd).toFixed(1);
+    const max3 = (activeMean + 3 * activeSd).toFixed(1);
+
+    document.getElementById('range2SdDisplay').textContent = `${min2} – ${max2}`;
+    document.getElementById('range3SdDisplay').textContent = `${min3} – ${max3}`;
+    document.getElementById('lotNumberDisplay').textContent = lvlData.lot;
+    document.getElementById('unitLabel').textContent = paramData.unit;
+    document.getElementById('unitSuffix').textContent = paramData.unit;
+    document.getElementById('unitMeta1').textContent = paramData.unit;
+    document.getElementById('unitMeta2').textContent = paramData.unit;
+
+    calculateZScore();
+  }
+
+  function calculateZScore() {
+    const resultInput = document.getElementById('qcResultInput');
+    const val = parseFloat(resultInput.value);
+    const zScoreElem = document.getElementById('calculatedZScoreValue');
+    const westgardBox = document.getElementById('westgardQuickStatus');
+    const alertBox = document.getElementById('westgardAlertBox');
+    const marker = document.getElementById('dynamicMarker');
+    const devLabel = document.getElementById('deviationLabel');
+
+    if (isNaN(val)) {
+      zScoreElem.textContent = "0.00 SD";
+      zScoreElem.className = "font-headline-lg text-headline-lg font-bold text-on-surface";
+      westgardBox.innerHTML = '<span class="font-label-sm text-label-sm text-on-surface-variant">Menunggu input nilai...</span>';
+      return;
+    }
+
+    const z = (val - activeMean) / activeSd;
+    const absZ = Math.abs(z);
+    const zSign = z >= 0 ? "+" : "";
+    zScoreElem.textContent = `${zSign}${z.toFixed(2)} SD`;
+
+    const diff = val - activeMean;
+    const diffSign = diff >= 0 ? "+" : "";
+    devLabel.textContent = `${diffSign}${diff.toFixed(1)} ${document.getElementById('unitSuffix').textContent} dari Target`;
+
+    // Visual gauge calculation: map -3.5SD to +3.5SD onto 0% to 100%
+    let gaugePercent = ((z + 3.5) / 7.0) * 100;
+    if (gaugePercent < 4) gaugePercent = 4;
+    if (gaugePercent > 96) gaugePercent = 96;
+    marker.style.left = gaugePercent + '%';
+
+    if (absZ > 3.0) {
+      zScoreElem.className = "font-headline-lg text-headline-lg font-bold text-error";
+      westgardBox.innerHTML = `
+        <span class="px-space-xs py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+          Reject 1-3s
+        </span>
+        <span class="font-label-sm text-label-sm text-error mt-0.5 font-medium">Di luar batas 3 SD</span>
+      `;
+      alertBox.classList.remove('hidden');
+      marker.className = "absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-error shadow-md ring-2 ring-surface-container-lowest z-20 flex items-center justify-center";
+      devLabel.className = "font-semibold text-error";
+    } else if (absZ > 2.0) {
+      zScoreElem.className = "font-headline-lg text-headline-lg font-bold text-secondary";
+      westgardBox.innerHTML = `
+        <span class="px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Warning 1-2s
+        </span>
+        <span class="font-label-sm text-label-sm text-secondary mt-0.5 font-medium">Periksa Tren Data</span>
+      `;
+      alertBox.classList.add('hidden');
+      marker.className = "absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary shadow-md ring-2 ring-surface-container-lowest z-20 flex items-center justify-center";
+      devLabel.className = "font-semibold text-secondary";
+    } else {
+      zScoreElem.className = "font-headline-lg text-headline-lg font-bold text-primary";
+      westgardBox.innerHTML = `
+        <span class="px-space-xs py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          In-Control
+        </span>
+        <span class="font-label-sm text-label-sm text-primary mt-0.5 font-medium">Presisi Diterima</span>
+      `;
+      alertBox.classList.add('hidden');
+      marker.className = "absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-md ring-2 ring-surface-container-lowest z-20 flex items-center justify-center";
+      devLabel.className = "font-semibold text-primary";
+    }
+  }
+
+  function toggleSimulateNormal() {
+    // Generate a value within 1 SD of activeMean
+    const randomShift = (Math.random() * 1.2 - 0.6) * activeSd;
+    const normalVal = (activeMean + randomShift).toFixed(1);
+    document.getElementById('qcResultInput').value = normalVal;
+    calculateZScore();
+  }
+
+  function resetFormCustom() {
+    selectLevel(3);
+    document.getElementById('qcResultInput').value = "215.0";
+    calculateZScore();
+  }
+
+  function handleQcSubmit() {
+    const val = parseFloat(document.getElementById('qcResultInput').value);
+    const z = (val - activeMean) / activeSd;
+
+    if (Math.abs(z) > 3.0) {
+      document.getElementById('westgardAlertBox').classList.remove('hidden');
+      alert("PERINGATAN AUDIT QC: Nilai kontrol berada di luar rentang penerimaan 3 SD. Sistem mencatat pelanggaran aturan Westgard 1-3s. Harap segera lengkapi formulir CAPA!");
+    } else {
+      alert("BERHASIL: Data QC harian telah tersimpan ke log database SIM-QC. Menunggu verifikasi Sp.PK pada akhir shift.");
+    }
+  }
+
+  function filterQcTable() {
+    const statusVal = document.getElementById('filterStatus').value;
+    const instVal = document.getElementById('filterInstrument').value;
+    const keyword = document.getElementById('filterKeyword').value.toLowerCase();
+    const rows = document.querySelectorAll('#qcTableBody tr');
+
+    rows.forEach(row => {
+      const rowStatus = row.getAttribute('data-status');
+      const rowInst = row.getAttribute('data-instrument');
+      const rowText = row.innerText.toLowerCase();
+
+      const matchStatus = (statusVal === 'ALL' || rowStatus === statusVal);
+      const matchInst = (instVal === 'ALL' || rowInst === instVal);
+      const matchKeyword = keyword === "" || rowText.includes(keyword);
+
+      if (matchStatus && matchInst && matchKeyword) {
+        row.style.display = "";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  }
+
+  function openCapaModal() {
+    document.getElementById('capaModal').classList.remove('hidden');
+  }
+
+  function closeCapaModal() {
+    document.getElementById('capaModal').classList.add('hidden');
+  }
+
+  function submitCapaDoc() {
+    alert("DOKUMEN CAPA DIKIRIM: Formulir investigasi telah ditandatangani secara digital oleh Siti Rahma, A.Md.AK dan diteruskan ke Penanggung Jawab Lab (dr. Hendra Pratama, Sp.PK).");
+    closeCapaModal();
+  }
+
+  function goToChart() {
+    alert("Membuka Modul Grafik Levey-Jennings 30 Hari untuk instrumen Dirui CS-T240 (Glukosa Darah)...");
+  }
+
+  // Initial Calculation Run on Load
+  document.addEventListener("DOMContentLoaded", () => {
+    calculateZScore();
+  });
+</script></main><footer class="w-full bg-surface-container-lowest py-space-sm px-gutter-desktop mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-label-sm text-label-sm gap-space-xs"><span class="">© 2024 RSUD Sultan Muhammad Jamaludin I — Sistem Informasi Monitoring Mutu Laboratorium (SIM-QC)</span><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Koneksi LIS / Analyzer: Normal (Sysmex XN-550, Cobas c311)</span><span class="">Kabupaten Kayong Utara</span></div></div></footer></div>
+
+</body></html>

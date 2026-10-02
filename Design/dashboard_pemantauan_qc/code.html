@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-tint": "#006a63",
+        "on-surface-variant": "#3e4947",
+        "on-tertiary-container": "#c4f3f2",
+        "on-secondary": "#ffffff",
+        "background": "#faf8ff",
+        "on-secondary-fixed": "#001f29",
+        "on-primary-fixed-variant": "#00504a",
+        "on-primary": "#ffffff",
+        "surface-container": "#eaedff",
+        "on-surface": "#131b2e",
+        "tertiary-fixed-dim": "#a1cfce",
+        "surface-variant": "#dae2fd",
+        "error-container": "#ffdad6",
+        "on-tertiary-fixed-variant": "#204e4d",
+        "tertiary": "#2c5858",
+        "surface-dim": "#d2d9f4",
+        "primary-fixed": "#9cf2e8",
+        "primary-fixed-dim": "#80d5cb",
+        "tertiary-fixed": "#bdebea",
+        "surface": "#faf8ff",
+        "error": "#ba1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-error": "#ffffff",
+        "primary": "#005c55",
+        "on-primary-fixed": "#00201d",
+        "secondary-fixed": "#b9eaff",
+        "secondary-fixed-dim": "#81d1f0",
+        "surface-container-highest": "#dae2fd",
+        "inverse-on-surface": "#eef0ff",
+        "on-secondary-fixed-variant": "#004d62",
+        "on-secondary-container": "#00647d",
+        "outline-variant": "#bdc9c6",
+        "inverse-surface": "#283044",
+        "secondary": "#006781",
+        "primary-container": "#0f766e",
+        "tertiary-container": "#457171",
+        "on-background": "#131b2e",
+        "secondary-container": "#8fdfff",
+        "on-error-container": "#93000a",
+        "on-tertiary-fixed": "#002020",
+        "outline": "#6e7977",
+        "surface-bright": "#faf8ff",
+        "inverse-primary": "#80d5cb",
+        "surface-container-low": "#f2f3ff",
+        "on-primary-container": "#a3faef",
+        "surface-container-high": "#e2e7ff",
+        "on-tertiary": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "margin": "1rem",
+        "space-lg": "1.25rem",
+        "space-md": "0.75rem",
+        "space-xl": "2rem",
+        "gutter-desktop": "1.5rem",
+        "margin-desktop": "2rem",
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "space-sm": "0.5rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Plus Jakarta Sans"],
+        "label-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "data-mono": ["Inter"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "body-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "display-lg-mobile": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "data-mono": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "display-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 min-h-0"><div class="px-space-md py-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center p-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.04)] flex-shrink-0"><span class="material-symbols-outlined text-primary text-headline-lg">biotech</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold truncate">SIM-QC LAB</span><span class="px-space-xs py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase">v2.4</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">RSUD SMJ I Kayong Utara</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Menu Analisis QC</span></div><nav class="flex-1 px-space-sm space-y-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_6px_rgba(0,92,85,0.15)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_6px_rgba(0,92,85,0.15)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-headline-sm">grid_view</span><span class="truncate">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="input-qc-harian" href="#"><span class="material-symbols-outlined text-headline-sm">edit_document</span><span class="truncate">Input QC Harian</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="grafik-levey-jennings" href="#"><span class="material-symbols-outlined text-headline-sm">show_chart</span><span class="truncate">Grafik Levey-Jennings</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="capa-pelanggaran-westgard" href="#"><div class="flex items-center gap-space-sm min-w-0"><span class="material-symbols-outlined text-headline-sm">warning</span><span class="truncate">CAPA &amp; Westgard</span></div><span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">3</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="master-data" href="#"><span class="material-symbols-outlined text-headline-sm">database</span><span class="truncate">Master Data</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="laporan" href="#"><span class="material-symbols-outlined text-headline-sm">analytics</span><span class="truncate">Laporan</span></a></nav></div><div class="p-space-sm bg-surface-container-low"><div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)] space-y-space-xs"><div class="flex items-center justify-between"><span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>Shift Pagi - Aktif</span><span class="font-label-sm text-label-sm text-on-surface-variant">Inst. Lab</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">dr. Hendra Pratama, Sp.PK</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Petugas: Siti Rahma, A.Md.AK</span></div></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md min-w-0"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="material-symbols-outlined text-body-lg text-primary">local_hospital</span><span class="font-semibold text-on-surface">Instalasi Laboratorium Patologi Klinik</span><span class="material-symbols-outlined text-body-sm">chevron_right</span><span class="text-primary font-medium truncate">Monitoring Kendali Mutu Internal (PMI)</span></div><div class="hidden xl:flex items-center px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>DATA DEMO AKTIF</div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-body-sm text-primary">calendar_today</span><span>Senin, 24 Oktober 2024</span><span class="text-on-surface-variant">•</span><span class="font-data-mono text-data-mono font-medium">08:42:15 WIB</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-lowest text-on-surface shadow-[0_1px_2px_rgba(0,0,0,0.05)] font-label-sm text-label-sm font-semibold" type="button">Petugas Lab</button><button class="px-space-sm py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">PJ / Sp.PK</button></div><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Cetak Lembar QC" type="button"><span class="material-symbols-outlined text-headline-sm">print</span></button><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Ekspor Data (Excel/PDF)" type="button"><span class="material-symbols-outlined text-headline-sm">file_download</span></button><div class="relative"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Notifikasi Pelanggaran Westgard" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span></button><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></div></div><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VF9xYxi4lY7QVwBsrmJEKA9OtraZyEBhbhoi_TahvahNsa_6VbHwPSqw8yKGJnrx4er4Pxi_6sZTGnvBNkLFBFWpgCBORk61kKY6PsGQX1XDDIu5RFnaTeHWjT9mjc8OPmy4PnZR51qyr36Q98coV-GccupGN2WmAhxQiVrTraS7-rQ8dJPK00CxBi-heSoAbQSdW-VPnxUOIH72MnSrnzjdRTvEmxkmk3z05tsoE8hl1PxUrPXL7-T_mWEX4jF7mpXuzvMvKq6zA"/></div></div></header><main class="relative pt-16 bg-surface min-h-[calc(100vh-4rem)] w-full px-gutter-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Page Context & Top Controls Header -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden">
+<!-- Ambient Laboratory Accent glow -->
+<div class="absolute -right-24 -top-24 w-80 h-80 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary-container">
+<span class="material-symbols-outlined text-display-lg" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Dashboard Pemantauan QC Laboratorium</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+              RSUD SMJ I Kayong Utara
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Monitoring Pemantapan Mutu Internal (PMI) Harian • Instalasi Laboratorium Patologi Klinik • Shift Pagi Aktif
+          </p>
+</div>
+</div>
+<!-- Action & Quick Filter Suite -->
+<div class="flex flex-wrap items-center gap-space-sm relative z-10">
+<!-- Date Filter Buttons -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-sm py-1.5 rounded-DEFAULT bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" type="button">
+            Hari Ini
+          </button>
+<button class="px-space-sm py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">
+            7 Hari Terakhir
+          </button>
+<button class="px-space-sm py-1.5 rounded-DEFAULT text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">
+            Bulan Ini
+          </button>
+</div>
+<!-- Analyzer Selector -->
+<div class="relative">
+<select class="h-9 pl- space-sm pr-8 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-high transition-colors">
+<option value="all">Semua Alat (4 Analyzer)</option>
+<option value="dirui">Kimia Darah - Dirui CS-T240</option>
+<option value="sysmex">Hematologi - Sysmex XN-550</option>
+<option value="cobas">Imunologi - Cobas e411</option>
+<option value="urinalisis">Urinalisis - Dirui H-500</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-headline-sm pointer-events-none text-on-surface-variant">arrow_drop_down</span>
+</div>
+<!-- Action Buttons -->
+<button class="h-9 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-semibold rounded-lg shadow-sm flex items-center gap-space-xs transition-colors" onclick="document.getElementById('modal-input-qc').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">add_circle</span>
+<span>Input QC Sekarang</span>
+</button>
+<button class="h-9 w-9 bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant rounded-lg flex items-center justify-center transition-colors" onclick="triggerRefresh(this)" title="Segarkan Data Realtime" type="button">
+<span class="material-symbols-outlined text-headline-sm">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6 KPI Indikator Mutu Realtime Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md mb-space-lg">
+<!-- Card 1: Total Pengujian -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total QC Hari Ini</span>
+<span class="material-symbols-outlined text-headline-md text-primary">fact_check</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">48</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 48 run</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-primary font-medium">100% Target Shift Tercapai</span>
+</div>
+</div>
+</div>
+<!-- Card 2: QC Normal -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">QC In-Control</span>
+<span class="material-symbols-outlined text-headline-md text-primary-container">check_circle</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary font-bold">42</span>
+<span class="font-label-md text-label-md text-on-surface-variant">(87.5%)</span>
+</div>
+<div class="mt-space-xs inline-flex items-center gap-1 px-space-xs py-0.5 rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Normal • Valid</span>
+</div>
+</div>
+</div>
+<!-- Card 3: QC Warning (1-2s) -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Warning 1-2s</span>
+<span class="material-symbols-outlined text-headline-md text-secondary">notification_important</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-secondary font-bold">4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">(8.3%)</span>
+</div>
+<div class="mt-space-xs inline-flex items-center gap-1 px-space-xs py-0.5 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-label-md leading-none">visibility</span>
+<span>Perlu Observasi</span>
+</div>
+</div>
+</div>
+<!-- Card 4: QC Reject (Out of Control) -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Reject Out of Ctrl</span>
+<span class="material-symbols-outlined text-headline-md text-error">cancel</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold">2</span>
+<span class="font-label-md text-label-md text-error-container font-semibold">(4.2%)</span>
+</div>
+<div class="mt-space-xs inline-flex items-center gap-1 px-space-xs py-0.5 rounded-DEFAULT bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span>Tindakan Segera</span>
+</div>
+</div>
+</div>
+<!-- Card 5: Pelanggaran Westgard -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Westgard Aktif</span>
+<span class="material-symbols-outlined text-headline-md text-error">rule</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Aturan</span>
+</div>
+<div class="mt-space-xs text-on-surface-variant font-label-sm text-label-sm truncate" title="1-3s (Glu L2), 2-2s (Hb L1)">
+          1-3s (Glu L2) &amp; 2-2s (Hb L1)
+        </div>
+</div>
+</div>
+<!-- Card 6: CAPA Pending -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">CAPA Terbuka</span>
+<span class="material-symbols-outlined text-headline-md text-tertiary">assignment_late</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-tertiary font-bold">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Kasus</span>
+</div>
+<div class="mt-space-xs inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant font-medium">
+<span class="text-error font-bold">1 Overdue</span>
+<span>•</span>
+<span>2 Verifikasi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Working Area: 2-Column Responsive Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- LEFT PANEL (Col 1-8): Charts & Data Tables -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Panel 1: Grafik Tren QC 7 Hari Terakhir & Levey-Jennings Miniature Preview -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">monitoring</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tren Kepatuhan QC &amp; Distribusi Status (7 Hari Terakhir)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Proporsi hasil QC Harian: Normal, Warning (1-2s), dan Rejection Westgard di seluruh instrumen.
+            </p>
+</div>
+<!-- Parameter Toggle Filter -->
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 rounded-lg overflow-x-auto">
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm" type="button">
+              Semua
+            </button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">
+              Glukosa
+            </button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">
+              Kolesterol
+            </button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">
+              Hb
+            </button>
+<button class="px-space-xs py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium" type="button">
+              Leukosit
+            </button>
+</div>
+</div>
+<!-- Key Metrics Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm p-space-sm bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex flex-col px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rata-rata Keandalan</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">96.2%</span>
+</div>
+<div class="flex flex-col px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CV Kumulatif Laboratorium</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-data-mono">2.81%</span>
+</div>
+<div class="flex flex-col px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Run Teruji</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">336 Sampel QC</span>
+</div>
+<div class="flex flex-col px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status Bias Analitik</span>
+<span class="font-headline-sm text-headline-sm text-primary-container font-semibold">≤ 0.5% (Aman)</span>
+</div>
+</div>
+<!-- Inline SVG Visualization: Stacked Bar Chart for 7 Days -->
+<div class="w-full h-56 flex flex-col justify-end pt-2 pb-1 relative">
+<!-- Background target guideline -->
+<div class="absolute inset-x-0 top-12 border-b border-dashed border-outline-variant/40 flex justify-between items-center text-label-sm font-label-sm text-on-surface-variant">
+<span class="bg-surface-container-lowest px-1">Ambang Batas Keamanan PMI: 95%</span>
+</div>
+<div class="grid grid-cols-7 h-44 gap-space-sm items-end z-10">
+<!-- Day 1: Sen (18 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-2 bg-error hover:opacity-80 transition-opacity" title="1 Reject"></div>
+<div class="h-4 bg-secondary hover:opacity-80 transition-opacity" title="3 Warning"></div>
+<div class="h-32 bg-primary-container hover:opacity-80 transition-opacity" title="44 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Sen (18)</span>
+</div>
+<!-- Day 2: Sel (19 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-0 bg-error"></div>
+<div class="h-3 bg-secondary hover:opacity-80 transition-opacity" title="2 Warning"></div>
+<div class="h-36 bg-primary-container hover:opacity-80 transition-opacity" title="46 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Sel (19)</span>
+</div>
+<!-- Day 3: Rab (20 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-3 bg-error hover:opacity-80 transition-opacity" title="2 Reject"></div>
+<div class="h-5 bg-secondary hover:opacity-80 transition-opacity" title="4 Warning"></div>
+<div class="h-30 bg-primary-container hover:opacity-80 transition-opacity" title="42 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Rab (20)</span>
+</div>
+<!-- Day 4: Kam (21 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-0 bg-error"></div>
+<div class="h-2 bg-secondary hover:opacity-80 transition-opacity" title="1 Warning"></div>
+<div class="h-38 bg-primary-container hover:opacity-80 transition-opacity" title="47 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Kam (21)</span>
+</div>
+<!-- Day 5: Jum (22 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-0 bg-error"></div>
+<div class="h-3 bg-secondary hover:opacity-80 transition-opacity" title="2 Warning"></div>
+<div class="h-37 bg-primary-container hover:opacity-80 transition-opacity" title="46 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Jum (22)</span>
+</div>
+<!-- Day 6: Sab (23 Okt) -->
+<div class="flex flex-col items-center h-full justify-end group">
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden shadow-xs">
+<div class="h-2 bg-error hover:opacity-80 transition-opacity" title="1 Reject"></div>
+<div class="h-3 bg-secondary hover:opacity-80 transition-opacity" title="2 Warning"></div>
+<div class="h-34 bg-primary-container hover:opacity-80 transition-opacity" title="45 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs">Sab (23)</span>
+</div>
+<!-- Day 7: Hari Ini (24 Okt) - Active -->
+<div class="flex flex-col items-center h-full justify-end relative group">
+<div class="absolute -top-3 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold shadow-xs">
+                Hari Ini
+              </div>
+<div class="w-full max-w-[42px] flex flex-col rounded-t overflow-hidden ring-2 ring-primary ring-offset-2 shadow-sm">
+<div class="h-4 bg-error hover:opacity-90" title="2 Reject"></div>
+<div class="h-5 bg-secondary hover:opacity-90" title="4 Warning"></div>
+<div class="h-32 bg-primary-container hover:opacity-90" title="42 Normal"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold mt-space-xs">Min (24)</span>
+</div>
+</div>
+</div>
+<!-- Chart Legend and Mini Action -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-sm mt-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Normal (In-Control)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Warning (Rule 1-2s)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Out-of-Control (Reject)</span>
+</div>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5 font-semibold" href="#">
+<span>Buka Modul Grafik Levey-Jennings Lengkap</span>
+<span class="material-symbols-outlined text-label-md">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Panel 2: Tabel Hasil QC Terbaru Hari Ini -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Log Entri Hasil QC Terbaru Hari Ini</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time sinkronisasi interface LIS &amp; Analyzer bench</span>
+</div>
+<!-- Filter & Search in Table -->
+<div class="flex items-center gap-space-xs">
+<div class="relative w-48 sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-headline-sm text-on-surface-variant">search</span>
+<input class="w-full h-8 pl-8 pr- space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Cari parameter, alat, lot..." type="text"/>
+</div>
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-lg flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-label-md">tune</span>
+<span>Filter Level</span>
+</button>
+</div>
+</div>
+<!-- Table Viewport -->
+<div class="w-full overflow-x-auto rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Jam</th>
+<th class="py-space-sm px-space-md">Alat / Analyzer</th>
+<th class="py-space-sm px-space-md">Parameter &amp; Lot</th>
+<th class="py-space-sm px-space-md text-right">Hasil (Unit)</th>
+<th class="py-space-sm px-space-md text-right">Target Mean ± SD</th>
+<th class="py-space-sm px-space-md text-center">Z-Score</th>
+<th class="py-space-sm px-space-md text-center">Status Mutu</th>
+<th class="py-space-sm px-space-md">Petugas Lab</th>
+<th class="py-space-sm px-space-md text-center">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Hemoglobin (Normal) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">08:30</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5 font-medium text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Sysmex XN-550</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Hemoglobin (Hb)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Level 2 • Lot: HEM-8821</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono font-bold text-on-surface">
+                  13.8 <span class="font-normal text-on-surface-variant text-label-sm">g/dL</span>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono text-on-surface-variant">
+                  13.6 ± 0.30
+                </td>
+<td class="py-space-sm px-space-md text-center font-data-mono text-data-mono font-semibold text-primary">
+                  +0.67 SD
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Normal
+                  </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant truncate max-w-[120px]">
+                  Siti Rahma, A.Md.AK
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<button class="w-7 h-7 inline-flex items-center justify-center rounded hover:bg-surface-container-high text-primary" title="Detail Grafik LJ" type="button">
+<span class="material-symbols-outlined text-headline-sm">ssid_chart</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Leukosit (Warning 1-2s) -->
+<tr class="bg-secondary-fixed/15 hover:bg-secondary-fixed/30 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">08:15</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5 font-medium text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Sysmex XN-550</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Leukosit (WBC)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Level 1 • Lot: WBC-4412</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono font-bold text-secondary">
+                  4.85 <span class="font-normal text-on-surface-variant text-label-sm">10^3/uL</span>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono text-on-surface-variant">
+                  4.20 ± 0.30
+                </td>
+<td class="py-space-sm px-space-md text-center font-data-mono text-data-mono font-bold text-secondary">
+                  +2.15 SD
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-label-md">warning</span>
+                    Warning (1-2s)
+                  </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant truncate max-w-[120px]">
+                  Siti Rahma, A.Md.AK
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<button class="w-7 h-7 inline-flex items-center justify-center rounded hover:bg-surface-container-high text-secondary" title="Observasi Data" type="button">
+<span class="material-symbols-outlined text-headline-sm">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Glukosa Sewaktu (Reject 1-3s) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-data-mono font-bold text-error">07:45</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5 font-medium text-on-surface">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Dirui CS-T240</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-error">Glukosa Sewaktu</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Level 2 • Lot: GLU-9903</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono font-bold text-error">
+                  242.0 <span class="font-normal text-on-surface-variant text-label-sm">mg/dL</span>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono text-on-surface-variant">
+                  215.0 ± 8.00
+                </td>
+<td class="py-space-sm px-space-md text-center font-data-mono text-data-mono font-bold text-error">
+                  +3.38 SD
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-label-md">block</span>
+                    Reject (1-3s)
+                  </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant truncate max-w-[120px]">
+                  Budi Santoso, S.Tr.Kes
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<button class="w-7 h-7 inline-flex items-center justify-center rounded bg-error text-on-error hover:bg-on-error-container" onclick="openCapaModal('CAPA-2024-10-042', 'Glukosa Sewaktu L2', 'Dirui CS-T240')" title="Buka Investigasi CAPA" type="button">
+<span class="material-symbols-outlined text-headline-sm">build</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Kolesterol Total (Normal) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">07:40</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5 font-medium text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Dirui CS-T240</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Kolesterol Total</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Level 1 • Lot: CHOL-112</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono font-bold text-on-surface">
+                  158.0 <span class="font-normal text-on-surface-variant text-label-sm">mg/dL</span>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono text-on-surface-variant">
+                  156.0 ± 5.00
+                </td>
+<td class="py-space-sm px-space-md text-center font-data-mono text-data-mono font-semibold text-primary">
+                  +0.40 SD
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Normal
+                  </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant truncate max-w-[120px]">
+                  Budi Santoso, S.Tr.Kes
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<button class="w-7 h-7 inline-flex items-center justify-center rounded hover:bg-surface-container-high text-primary" title="Detail Grafik LJ" type="button">
+<span class="material-symbols-outlined text-headline-sm">ssid_chart</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: SGOT / AST (Normal) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md font-data-mono text-data-mono font-medium text-on-surface-variant">07:15</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-1.5 font-medium text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Dirui CS-T240</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">SGOT (AST)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Level 1 • Lot: ENZ-204</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono font-bold text-on-surface">
+                  42.0 <span class="font-normal text-on-surface-variant text-label-sm">U/L</span>
+</td>
+<td class="py-space-sm px-space-md text-right font-data-mono text-data-mono text-on-surface-variant">
+                  40.0 ± 2.50
+                </td>
+<td class="py-space-sm px-space-md text-center font-data-mono text-data-mono font-semibold text-primary">
+                  +0.80 SD
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Normal
+                  </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-on-surface-variant truncate max-w-[120px]">
+                  Andi Wijaya, A.Md.AK
+                </td>
+<td class="py-space-sm px-space-md text-center">
+<button class="w-7 h-7 inline-flex items-center justify-center rounded hover:bg-surface-container-high text-primary" title="Detail Grafik LJ" type="button">
+<span class="material-symbols-outlined text-headline-sm">ssid_chart</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span>Menampilkan 5 dari 48 entri kontrol kualitas hari ini</span>
+<div class="flex items-center gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-semibold hover:bg-surface-container-high" type="button">Sebelumnya</button>
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-semibold" type="button">1</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container-high" type="button">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-semibold hover:bg-surface-container-high" type="button">Berikutnya</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL (Col 9-12): Realtime Westgard Alerts & Active CAPA Actions -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- Box 1: Peringatan Pelanggaran Westgard Terbaru (Real-time) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-headline-sm animate-pulse">crisis_alert</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Peringatan Westgard Aktif</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+            2 Kritis • 1 Warning
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Alarm sistem otomatis mendeteksi pelanggaran aturan multirule Westgard pada siklus run pagi.
+        </p>
+<!-- Alert Cards Stack -->
+<div class="flex flex-col gap-space-sm">
+<!-- Alert 1: Out of control Glukosa (Crimson Card) -->
+<div class="p-space-md rounded-xl bg-error-container/30 border-l-4 border-error flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-error">
+                ATURAN 1-3s (REJECT OUT-OF-CONTROL)
+              </span>
+<span class="font-data-mono text-data-mono text-error font-medium">07:45 WIB</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Dirui CS-T240 • Glukosa Sewaktu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Level 2 (Lot: GLU-9903) | Z-Score: <span class="font-bold text-error font-data-mono">+3.38 SD</span></span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest/80 rounded font-label-sm text-label-sm text-on-surface-variant">
+              Sampel pasien glukosa ditangguhkan sampai re-run kontrol dan validasi ulang selesai.
+            </div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<button class="px-space-sm py-1.5 bg-error text-on-error font-label-sm text-label-sm font-semibold rounded shadow-xs hover:bg-on-error-container transition-colors flex items-center gap-1" onclick="openCapaModal('CAPA-2024-10-042', 'Glukosa Sewaktu L2', 'Dirui CS-T240')" type="button">
+<span class="material-symbols-outlined text-label-md">assignment_add</span>
+<span>Buka Investigasi CAPA</span>
+</button>
+<button class="px-space-sm py-1.5 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium rounded hover:bg-surface-container-low transition-colors" type="button">
+                Lihat Kurva LJ
+              </button>
+</div>
+</div>
+<!-- Alert 2: Warning Sysmex Leukosit (Amber Card) -->
+<div class="p-space-md rounded-xl bg-secondary-fixed/30 border-l-4 border-secondary flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-secondary">
+                ATURAN 1-2s (WARNING OBSERVASI)
+              </span>
+<span class="font-data-mono text-data-mono text-secondary font-medium">08:15 WIB</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Sysmex XN-550 • Leukosit (WBC)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Level 1 (Lot: WBC-4412) | Z-Score: <span class="font-bold text-secondary font-data-mono">+2.15 SD</span></span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest/80 rounded font-label-sm text-label-sm text-on-surface-variant">
+              Peringatan acak: Boleh lanjut menjalankan sampel pasien dengan pengawasan ketat run berikutnya.
+            </div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Terselesaikan Otomatis (Observasi)</span>
+<button class="px-space-sm py-1 bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-medium rounded hover:bg-surface-container-low transition-colors" type="button">
+                Tandai Dibaca
+              </button>
+</div>
+</div>
+<!-- Alert 3: Out of control Cobas e411 HBsAg (Crimson Card) -->
+<div class="p-space-md rounded-xl bg-error-container/30 border-l-4 border-error flex flex-col gap-space-xs relative">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-error">
+                ATURAN 2-2s (SISTEMATIK BIAS)
+              </span>
+<span class="font-data-mono text-data-mono text-error font-medium">06:30 WIB</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Cobas e411 • HBsAg Kualitatif</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Level 2 | 2 poin berturut-turut melebihi +2.0 SD (Systematic Error)</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<button class="px-space-sm py-1.5 bg-error text-on-error font-label-sm text-label-sm font-semibold rounded shadow-xs hover:bg-on-error-container transition-colors flex items-center gap-1" onclick="openCapaModal('CAPA-2024-10-039', 'HBsAg Cobas e411', 'Cobas e411')" type="button">
+<span class="material-symbols-outlined text-label-md">build</span>
+<span>Tindak Lanjut CAPA-039</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Box 2: Daftar CAPA Terbuka & Perlu Tindak Lanjut Segera -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">pending_actions</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tindakan Korektif (CAPA)</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">Semua CAPA →</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Formulir Corrective &amp; Preventive Action yang memerlukan verifikasi Penanggung Jawab Lab.
+        </p>
+<!-- CAPA Item Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Glukosa on board -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-data-mono font-bold text-primary">#CAPA-2024-10-042</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+                Dalam Proses
+              </span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Glukosa: Reagen Habis Masa Stabilitas On-Board</span>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-0.5">
+<span>PIC: Budi Santoso</span>
+<span class="text-primary font-medium">Batas: Hari Ini 12:00</span>
+</div>
+</div>
+<!-- Item 2: Drift Elektrolit (Overdue!) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-data-mono font-bold text-error">#CAPA-2024-10-039</span>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                TERLAMBAT (OVERDUE)
+              </span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Drift Elektrolit ISE Na+ • Perlu Kalibrasi Ulang</span>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-0.5">
+<span>PIC: Siti Rahma, A.Md.AK</span>
+<span class="text-error font-bold">Batas: Kemarin 16:00</span>
+</div>
+</div>
+<!-- Item 3: Penggantian Lampu Fotometer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-data-mono text-data-mono font-bold text-tertiary">#CAPA-2024-10-041</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                Menunggu Verifikasi Sp.PK
+              </span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Penggantian Lampu Halogen Fotometer Dirui CS</span>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-0.5">
+<span>PIC: Andi Wijaya / Vendor</span>
+<span>Batas: Besok 10:00</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-2 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold rounded-lg flex items-center justify-center gap-1 transition-colors" onclick="openCapaModal('BARU', 'Umum', 'Dirui CS-T240')" type="button">
+<span class="material-symbols-outlined text-headline-sm text-primary">add_task</span>
+<span>Buat Laporan Investigasi CAPA Baru</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal 1: Quick Input QC Harian -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-xs hidden p-space-md" id="modal-input-qc">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-xl overflow-hidden flex flex-col">
+<!-- Modal Header with Clinical Cyan Tint Wash -->
+<div class="px-space-lg py-space-md bg-secondary-fixed/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-headline-sm">edit_note</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Input Hasil Pengujian QC Harian</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Laboratorium Patologi Klinik • RSUD SMJ I</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('modal-input-qc').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<form class="p-space-lg flex flex-col gap-space-md" id="form-qc" onsubmit="event.preventDefault(); submitQC();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Alat / Analyzer</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors">
+<option>Dirui CS-T240 (Kimia Darah)</option>
+<option>Sysmex XN-550 (Hematologi)</option>
+<option>Cobas e411 (Imunoserologi)</option>
+<option>Dirui H-500 (Urinalisis)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Parameter Uji</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors">
+<option>Glukosa Darah (GLU)</option>
+<option>Kolesterol Total (CHOL)</option>
+<option>Trigliserida (TRIG)</option>
+<option>SGOT / AST</option>
+<option>SGPT / ALT</option>
+<option>Ureum • Kreatinin</option>
+<option>Hemoglobin (Hb)</option>
+<option>Leukosit (WBC)</option>
+<option>Trombosit (PLT)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Level Kontrol</label>
+<div class="flex rounded-lg bg-surface-container-low p-1">
+<button class="flex-1 py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-xs" type="button">L1</button>
+<button class="flex-1 py-1 rounded text-on-surface-variant font-label-sm text-label-sm font-medium" type="button">L2</button>
+<button class="flex-1 py-1 rounded text-on-surface-variant font-label-sm text-label-sm font-medium" type="button">L3</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nomor Lot Reagen</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" type="text" value="GLU-9903"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nilai Pengukuran</label>
+<input class="h-9 px-space-sm bg-surface-container-low font-data-mono text-data-mono font-bold text-on-surface rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="215.4" required="" step="0.01" type="number"/>
+</div>
+</div>
+<!-- Reference Statistics Info Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Target Mean Referensi: <strong class="text-on-surface font-data-mono">215.0</strong></span>
+<span>Target SD: <strong class="text-on-surface font-data-mono">8.00</strong></span>
+<span>CV Maks: <strong class="text-on-surface font-data-mono">3.72%</strong></span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Catatan / Kondisi Instrumen (Opsional)</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high transition-colors" placeholder="Suhu ruang: 22°C, Fluktuasi tegangan normal..." type="text"/>
+</div>
+<!-- Modal Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs mt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" onclick="document.getElementById('modal-input-qc').classList.add('hidden')" type="button">
+            Batal
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors flex items-center gap-1" type="submit">
+<span class="material-symbols-outlined text-label-md">save</span>
+<span>Simpan &amp; Evaluasi Westgard</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Interactive Modal 2: Form CAPA (Corrective Action) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-xs hidden p-space-md" id="modal-capa">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-error-container/40 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-headline-lg">report_problem</span>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="capa-modal-title">Investigasi &amp; CAPA Westgard</h3>
+<span class="font-label-sm text-label-sm text-error font-semibold" id="capa-modal-subtitle">Pelanggaran Aturan 1-3s Terdeteksi</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('modal-capa').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Penyebab Utama (Root Cause Analysis)</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none">
+<option>Masa Stabilitas Reagen On-Board Kedaluwarsa</option>
+<option>Pergeseran Kalibrasi (Drift Analitik)</option>
+<option>Kontaminasi Kuvet Reaksi / Jarum Pipet</option>
+<option>Fluktuasi Suhu Inkubasi Analitik</option>
+<option>Kesalahan Rekonstitusi Serum Kontrol</option>
+<option>Lainnya (Tuliskan pada deskripsi)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Tindakan Koreksi Cepat (Immediate Correction)</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none">
+<option>Ganti Cartridge Reagen Baru &amp; Re-run QC</option>
+<option>Lakukan Rekalibrasi Multi-Poin Penuh</option>
+<option>Maintenance Cuci Probe &amp; Cuci Kuvet Intensif</option>
+<option>Buka Vial Kontrol Baru &amp; Thawing Ulang</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Deskripsi Rincian Tindakan Teknisi Lab</label>
+<textarea class="p-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none resize-none" placeholder="Tuliskan nomor lot reagen pengganti, hasil pengujian ulang kontrol pasca koreksi..." rows="3"></textarea>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Pelapor: <strong>Budi Santoso, S.Tr.Kes</strong></span>
+<span>Verifikator: <strong>dr. Hendra Pratama, Sp.PK</strong></span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" onclick="document.getElementById('modal-capa').classList.add('hidden')" type="button">
+            Tutup
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors" onclick="saveCapaAction()" type="button">
+            Kirim CAPA untuk Verifikasi
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openCapaModal(id, param, instrument) {
+    document.getElementById('capa-modal-title').innerText = 'CAPA: ' + param;
+    document.getElementById('capa-modal-subtitle').innerText = 'Instrumen: ' + instrument + ' | ID: ' + id;
+    document.getElementById('modal-capa').classList.remove('hidden');
+  }
+
+  function triggerRefresh(button) {
+    const icon = button.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+      }, 700);
+    }
+  }
+
+  function submitQC() {
+    const modal = document.getElementById('modal-input-qc');
+    modal.classList.add('hidden');
+    alert('Data QC harian berhasil disimpan. Nilai otomatis diverifikasi terhadap aturan Westgard.');
+  }
+
+  function saveCapaAction() {
+    const modal = document.getElementById('modal-capa');
+    modal.classList.add('hidden');
+    alert('Tindakan CAPA berhasil dicatat dan diteruskan ke Penanggung Jawab Laboratorium (dr. Hendra Pratama, Sp.PK) untuk approval.');
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-sm px-gutter-desktop mt-auto shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-label-sm text-label-sm gap-space-xs"><span>© 2024 RSUD Sultan Muhammad Jamaludin I — Sistem Informasi Monitoring Mutu Laboratorium (SIM-QC)</span><div class="flex items-center gap-space-md"><span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Koneksi LIS / Analyzer: Normal (Sysmex XN-550, Cobas c311)</span><span>Kabupaten Kayong Utara</span></div></div></footer></div></body></html>
